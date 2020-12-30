@@ -1,6 +1,5 @@
-# efficiency-demand-supply-rejection
-A study on the interplay between supply, demand, rejections and revenue in
-passenger transport systems.  This repository consists of jupyter notebooks
+# A workflow for collaborative reproducible scientific article writing
+This repository consists of jupyter notebooks
 converted to python scripts using
 [jupytext](https://jupytext.readthedocs.io/en/latest/install.html).  The
 notebooks can be converted into LaTeX, and PDF using `nbconvert` and a supplied
@@ -17,15 +16,15 @@ pip install -r requirements.txt
 # Convert the py files to ipynb, preserving important metadata
 jupytext --to ipynb --update-metadata \
     '{"jupytext": {"notebook_metadata_filter":"latex_metadata,celltoolbar", "cell_metadata_filter":"caption,label"}}'\
-    efficiency_price.py
+    hello.py
 ```
 
 ## Converting the notebook into PDF
 ```bash
 # Convert the ipynb to latex using nbconvert
-jupyter nbconvert --to=latex --template=revtex_nocode.tplx efficiency_price.ipynb
+jupyter nbconvert --to=latex --template=revtex_nocode.tplx hello.ipynb
 # Compile the latex file into a PDF
-latexmk -pdf efficiency_price
+latexmk -pdf hello
 ```
 
 ## Getting the LaTeX output look just *right*
