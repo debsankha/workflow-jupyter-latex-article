@@ -62,8 +62,8 @@
 #
 # ### Cross references
 # Just use `\label{bla}` \label{crossref} and `\ref{bla}` \ref{crossref} in any markdown cell as you would in a
-# LaTeX document. The cross references won't be rendered properly in the jupyter
-# notebook, but the LaTeX output will be just fine. Referencing equations such as 
+# LaTeX document. The cross references will be rendered properly in the 
+# notebook (thanks to the `latex_envs` jupyter notebook extension), as well as in the LaTeX output. Referencing equations such as 
 #
 # \begin{equation}
 # E=mc^2 \label{eq-foo}
@@ -80,10 +80,7 @@
 # ((* endblock bibliography *))
 # ```
 #
-# To actually cite a bibliography entry with a key `newm` inside a markdown cell, one needs to add the following <cite data-cite="newm">(Newman)</cite>:
-# ```html
-# <cite data-cite="newm">(Newman)</cite>.
-# ``` 
+# To actually cite a bibliography entry with a key `newm` inside a markdown cell, one can use `\cite{newm}`, just like in a ``real'' $\LaTeX$ document.
 #
 # ### Document title, author and affiliation
 # We can add these as metadata to the jupyter notebook itself, which will then automatically be translated into appropriate $\LaTeX$ commands. On the menu bar, click on "Edit" -> "Edit Notebook Metadata". A window containing metadata in JSON will pop up. There one has to add/edit the following entries:
